@@ -16,6 +16,8 @@
     ================================================== -->
     <link rel="stylesheet" href="css/vendor.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/animation.css" />
+
 
     <!-- favicons
     ================================================== -->
@@ -149,7 +151,7 @@
                       placeholder="Enter your Description"
                       style="height: 10%"
                     ></textarea>
-                    <input type="submit" id="btn" style="width: 100%;" />
+                    <button type="submit" style="width: 100%; " class="btnbtn"> <span>SEND</span> </button>
                       
                   </form>
 
@@ -423,5 +425,14 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="js/contact.js"></script>
+    <script>
+      const btn = document.querySelector('.btnbtn');
+      btn.onmousemove = function (e) {
+        const x = e.pageX - btn.offsetLeft;
+        const y = e.pageY - btn.offsetTop;
+        btn.style.setProperty('--x', x + 'px');
+        btn.style.setProperty('--y', y + 'px');
+      }
+    </script>
   </body>
 </html>
