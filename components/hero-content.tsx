@@ -1,8 +1,15 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { ArrowDown, Github, Linkedin, Mail, MessageCircle, Send } from "lucide-react"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import {
+  ArrowDown,
+  Github,
+  Linkedin,
+  Mail,
+  MessageCircle,
+  Send,
+} from "lucide-react";
+import Link from "next/link";
 
 export function HeroContent() {
   return (
@@ -12,10 +19,12 @@ export function HeroContent() {
           <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
             Hello, I'm Natnael
           </h1>
-          <h2 className="text-2xl md:text-3xl font-light mb-6 text-white/90">Full Stack Developer</h2>
+          <h2 className="text-2xl md:text-3xl font-light mb-6 text-white/90">
+            Full Stack Developer
+          </h2>
           <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
-            Crafting digital experiences with modern technologies. Specialized in React, Node.js, and real-time
-            applications from Ethiopia 🇪🇹
+            Crafting digital experiences with modern technologies. Specialized
+            in React, Node.js, and real-time applications from Ethiopia 🇪🇹
           </p>
         </div>
 
@@ -41,31 +50,36 @@ export function HeroContent() {
 
         <div className="flex items-center justify-center space-x-6 mb-12">
           <Link
-            href="https://github.com/natnael"
+            href="https://github.com/natishget"
+            target="_blank"
             className="text-white/60 hover:text-white transition-all duration-200 hover:scale-110 transform"
           >
             <Github className="h-6 w-6" />
           </Link>
           <Link
-            href="https://linkedin.com/in/natnael"
+            href="https://www.linkedin.com/in/natnael-getachew-natish/"
+            target="_blank"
             className="text-white/60 hover:text-white transition-all duration-200 hover:scale-110 transform"
           >
             <Linkedin className="h-6 w-6" />
           </Link>
           <Link
-            href="mailto:natnael@example.com"
+            href="mailto:natishgt@gmail.com"
+            target="_blank"
             className="text-white/60 hover:text-white transition-all duration-200 hover:scale-110 transform"
           >
             <Mail className="h-6 w-6" />
           </Link>
           <Link
-            href="https://wa.me/251900000000"
+            href="https://wa.me/251983780984"
+            target="_blank"
             className="text-white/60 hover:text-white transition-all duration-200 hover:scale-110 transform"
           >
             <MessageCircle className="h-6 w-6" />
           </Link>
           <Link
-            href="https://t.me/natnael_dev"
+            href="https://t.me/natishget"
+            target="_blank"
             className="text-white/60 hover:text-white transition-all duration-200 hover:scale-110 transform"
           >
             <Send className="h-6 w-6" />
@@ -77,5 +91,5 @@ export function HeroContent() {
         </div>
       </div>
     </div>
-  )
+  );
 }

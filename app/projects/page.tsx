@@ -20,10 +20,10 @@ export default function Projects() {
       year: "2023",
       category: "Web Application",
       features: [
-        "Real-time tracking",
-        "Route optimization",
-        "Fleet management",
-        "Live notifications",
+        "Product catalog",
+        "Contact forms",
+        "Company showcase",
+        "Responsive design",
       ],
     },
     {
@@ -39,7 +39,7 @@ export default function Projects() {
         "Express",
         "Redux",
       ],
-      image: "/placeholder.svg?height=300&width=500",
+      image: "/afro.png",
       year: "2023",
       category: "Web Application",
       features: [

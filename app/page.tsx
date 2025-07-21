@@ -1,30 +1,30 @@
-"use client"
+"use client";
 
-import { Canvas } from "@react-three/fiber"
-import { Suspense, useState, useEffect } from "react"
-import { Environment, OrbitControls } from "@react-three/drei"
-import { EnhancedHeroScene } from "@/components/enhanced-hero-scene"
-import { Navigation } from "@/components/navigation"
-import { HeroContent } from "@/components/hero-content"
-import { AboutPreview } from "@/components/about-preview"
-import { ProjectsPreview } from "@/components/projects-preview"
-import { ContactPreview } from "@/components/contact-preview"
-import { Footer } from "@/components/footer"
-import { LoadingAnimation } from "@/components/loading-animation"
+import { Canvas } from "@react-three/fiber";
+import { Suspense, useState, useEffect } from "react";
+import { Environment, OrbitControls } from "@react-three/drei";
+import { EnhancedHeroScene } from "@/components/enhanced-hero-scene";
+import { Navigation } from "@/components/navigation";
+import { HeroContent } from "@/components/hero-content";
+import { AboutPreview } from "@/components/about-preview";
+import { ProjectsPreview } from "@/components/projects-preview";
+import { ContactPreview } from "@/components/contact-preview";
+import { Footer } from "@/components/footer";
+import { LoadingAnimation } from "@/components/loading-animation";
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 2000)
+      setIsLoading(false);
+    }, 2000);
 
-    return () => clearTimeout(timer)
-  }, [])
+    return () => clearTimeout(timer);
+  }, []);
 
   if (isLoading) {
-    return <LoadingAnimation />
+    return <LoadingAnimation />;
   }
 
   return (
@@ -64,5 +64,5 @@ export default function Home() {
       {/* Footer */}
       <Footer />
     </div>
-  )
+  );
 }

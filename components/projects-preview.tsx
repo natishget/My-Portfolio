@@ -1,38 +1,41 @@
-"use client"
+"use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ExternalLink, Github, ArrowRight } from "lucide-react"
-import Link from "next/link"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export function ProjectsPreview() {
   const projects = [
     {
       title: "GPS Driver Tracking System",
-      description: "Real-time driver tracking with Google Maps API and WebSockets",
+      description:
+        "Real-time driver tracking with Google Maps API and WebSockets",
       technologies: ["React", "Node.js", "Socket.IO", "Google Maps API"],
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/afro.png",
     },
     {
       title: "Kermen Aluminium Website",
       description: "Corporate website for aluminium manufacturing company",
       technologies: ["PHP", "MySQL", "JavaScript", "CSS"],
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/kermen1.jpg",
     },
     {
       title: "Stock Management System",
       description: "FIFO-based inventory management with real-time tracking",
       technologies: ["React", "Node.js", "MongoDB", "Express"],
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/kermen.jpg",
     },
-  ]
+  ];
 
   return (
     <section id="projects" className="py-20 px-4 bg-black/20">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Featured Projects</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Featured Projects
+          </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
             A showcase of my recent work and technical expertise
           </p>
@@ -55,8 +58,12 @@ export function ProjectsPreview() {
                 </div>
               </CardHeader>
               <CardContent className="p-6">
-                <CardTitle className="text-white mb-2">{project.title}</CardTitle>
-                <p className="text-white/70 mb-4 text-sm">{project.description}</p>
+                <CardTitle className="text-white mb-2">
+                  {project.title}
+                </CardTitle>
+                <p className="text-white/70 mb-4 text-sm">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <Badge
@@ -69,10 +76,18 @@ export function ProjectsPreview() {
                   ))}
                 </div>
                 <div className="flex space-x-2">
-                  <Button size="sm" variant="ghost" className="text-white hover:bg-white/10 p-2">
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    className="text-white hover:bg-white/10 p-2"
+                  >
                     <Github className="h-4 w-4" />
                   </Button>
-                  <Button size="sm" variant="ghost" className="text-white hover:bg-white/10 p-2">
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    className="text-white hover:bg-white/10 p-2"
+                  >
                     <ExternalLink className="h-4 w-4" />
                   </Button>
                 </div>
@@ -83,7 +98,10 @@ export function ProjectsPreview() {
 
         <div className="text-center">
           <Link href="/projects">
-            <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white">
+            <Button
+              size="lg"
+              className="bg-purple-600 hover:bg-purple-700 text-white"
+            >
               View All Projects
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
@@ -91,5 +109,5 @@ export function ProjectsPreview() {
         </div>
       </div>
     </section>
-  )
+  );
 }
